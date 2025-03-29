@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo MFS</title>
+
+    <!-- daisy ui cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <main class="flex justify-center">
+
+          <div class="mockup-phone bg-cyan-100">
+            <div class="mockup-phone-camera bg-base-100"></div>
+            <div class="mockup-phone-display text-white grid place-content-center">
+
+                <!-- account balance -->
+                <div class="stats shadow bg-base-100 mb-5">
+                    <div class="stat text-center">
+                      <div class="stat-title text-black text-2xl">Account Balance</div>
+                      <div id="current-balance" class="stat-value text-black">1000</div> 
+                    </div>
+                </div>
+
+                <!-- divider -->
+                <div class="divider"></div>
+
+                <!-- buttons -->
+                <div class="grid grid-cols-2 gap-5">
+                <button id="show-add-money-form" class="btn btn-lg">Add Money</button>
+                <button id="show-cash-out-form" class="btn btn-lg">Cash Out</button>
+                <button id="show-transaction-section" class="btn btn-lg">Transaction</button>
+                <button class="btn btn-lg">Payment</button>
+                </div>
+
+                <!-- divider -->
+                <div class="divider"></div>
+
+                <!-- add money section start -->
+                <div id="add-money-section" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div class="card-body">
+                      <fieldset class="fieldset">
+
+                        <label class="fieldset-label">Add Money</label>
+                        <input id="add-money-amount" type="text" class="input text-black" placeholder="Amount" />
+
+                        <label class="fieldset-label">PIN Number</label>
+                        <input id="input-pin-number" type="password" class="input text-black" placeholder="PIN" />
+
+                        <button id="btn-add-money" class="btn btn-neutral mt-4">Add Money</button>
+                      </fieldset>
+                    </div>
+                  </div>             
+                <!-- add money section end -->
+
+                <!-- cash out section start -->
+                <div id="cash-out-section" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                  <div class="card-body">
+                    <fieldset class="fieldset">
+
+                      <label class="fieldset-label">Cash Out</label>
+                      <input id="add-cash-out" type="text" class="input text-black" placeholder="Amount" />
+
+                      <label class="fieldset-label">PIN Number</label>
+                      <input id="input-cash-out-pin" type="password" class="input text-black" placeholder="PIN" />
+
+                      <button id="btn-cash-out" class="btn btn-neutral mt-4">Cash Out</button>
+                    </fieldset>
+                  </div>
+                </div> 
+                <!-- cash out section end -->
+
+                <!-- transaction section start -->
+                  
+                <div id="transaction-section" class="hidden space-y-3">
+                  <h1 class="text-5xl text-center text-black">Transaction History</h1>
+
+                  <div id="transaction-container" class="text-orange-600"></div>
+                </div>
+
+                <!-- transaction section end -->
+            </div>
+          </div>
+    </main>
+
+    <!-- <script src="js/utilities.js"></script>
+    <script src="js/addmoney.js"></script> -->
+
+    <script src="js/utilities2.js"></script>
+    <script src="js/addmoney2.js"></script>
+    <script src="js/cashout.js"></script>
+    <script src="js/features.js"></script>
+</body>
+</html>
